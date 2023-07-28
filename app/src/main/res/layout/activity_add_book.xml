@@ -30,6 +30,13 @@
         android:layout_marginBottom="16dp"
         android:hint="Book description (max 32 chars)"/>
 
+    <EditText
+        android:id="@+id/edt_author"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:hint="Author name"/>
+
     <Button
         android:id="@+id/btn_startAddBook"
         android:layout_width="match_parent"

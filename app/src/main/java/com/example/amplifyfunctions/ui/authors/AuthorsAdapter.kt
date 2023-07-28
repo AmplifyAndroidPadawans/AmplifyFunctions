@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.amplifyfunctions.R
 
-class AuthorsAdapter(private val authorsList: List<T>, private val listener: AuthorsInterface):
+class AuthorsAdapter(private val authorsList: List<T>):
     RecyclerView.Adapter<AuthorsAdapter.AuthorsViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
@@ -22,10 +22,8 @@ class AuthorsAdapter(private val authorsList: List<T>, private val listener: Aut
 
     override fun onBindViewHolder(holder: AuthorsViewHolder, position: Int) {
         val item = authorsList[position]
-        holder.tvAuthorName.text = item.title
-
-        holder.btnEditAuthor.setOnClickListener { listener.editAuthor(item) }
-        holder.btnDeleteAuthor.setOnClickListener { listener.removeAuthor(item) }
+        holder.tvAuthorName.text = item.name
+        holder.tvBooksPerAuthor.text = item.numBooks
     }
 
     override fun getItemCount(): Int = authorsList.size
@@ -33,12 +31,6 @@ class AuthorsAdapter(private val authorsList: List<T>, private val listener: Aut
 
     inner class AuthorsViewHolder(ItemView: View): RecyclerView.ViewHolder(ItemView) {
         val tvAuthorName: TextView = itemView.findViewById(R.id.tv_authorName)
-        val btnEditAuthor: Button = itemView.findViewById(R.id.btn_editAuthor)
-        val btnDeleteAuthor: Button = itemView.findViewById(R.id.btn_deleteAuthor)
+        val tvBooksPerAuthor: TextView = itemView.findViewById(R.id.tv_booksPerAuthor)
     }
-}
-
-interface AuthorsInterface {
-    fun editAuthor(author: T)
-    fun removeAuthor(author: T)
 }

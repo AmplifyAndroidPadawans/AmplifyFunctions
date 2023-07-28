@@ -20,6 +20,7 @@ class AddBookActivity : AppCompatActivity() {
         binding.btnStartAddBook.setOnClickListener {
             val bookName = binding.edtBookName.text.toString()
             val bookDescription = binding.edtBookDescription.text.toString()
+            val author = binding.edtBookDescription.text.toString()
 
             // TODO: Implement add method
         }
