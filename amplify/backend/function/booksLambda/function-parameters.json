@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "function": {
+      "booksTableTriggerf9eb6a10": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ]
+    },
+    "storage": {
+      "booksTable": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ],
+      "authorsTable": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ]
+    }
+  },
+  "lambdaLayers": []
+}

@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.amplifyfunctions.R
 
-class AuthorsAdapter(private val authorsList: List<T>):
+class AuthorsAdapter(private val authorsList: List<String>):
     RecyclerView.Adapter<AuthorsAdapter.AuthorsViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
@@ -22,8 +22,8 @@ class AuthorsAdapter(private val authorsList: List<T>):
 
     override fun onBindViewHolder(holder: AuthorsViewHolder, position: Int) {
         val item = authorsList[position]
-        holder.tvAuthorName.text = item.name
-        holder.tvBooksPerAuthor.text = item.numBooks
+        //holder.tvAuthorName.text = item.name
+        //holder.tvBooksPerAuthor.text = item.numBooks
     }
 
     override fun getItemCount(): Int = authorsList.size

@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "paths": {
+    "/books": {
+      "name": "/books",
+      "lambdaFunction": "booksLambda",
+      "permissions": {
+        "setting": "protected",
+        "auth": [
+          "create",
+          "read",
+          "update",
+          "delete"
+        ],
+        "guest": [
+          "create",
+          "read",
+          "update",
+          "delete"
+        ]
+      }
+    },
+    "/authors": {
+      "name": "/authors",
+      "lambdaFunction": "booksLambda",
+      "permissions": {
+        "setting": "protected",
+        "auth": [
+          "create",
+          "read",
+          "update",
+          "delete"
+        ],
+        "guest": [
+          "create",
+          "read",
+          "update",
+          "delete"
+        ]
+      }
+    }
+  }
+}

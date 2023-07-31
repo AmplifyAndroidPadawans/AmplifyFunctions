@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "storage": {
+      "booksTable": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ],
+      "authorsTable": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ]
+    }
+  }
+}
